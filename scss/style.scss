@@ -1,7 +1,5 @@
-
 @import "../bower_components/normalize-css/normalize.css";
 @import "../bower_components/typeplate-starter-kit/css/typeplate.css";
-
 /**
  * BOX-SIZING
  */
@@ -11,7 +9,6 @@
 *:after {
     box-sizing: border-box;
 }
-
 /**
  * GRIDS
  */
@@ -37,7 +34,9 @@
     }
 }
 
-@define-mixin gridify $col, $width, $gutter: 2 {
+@define-mixin gridify $col,
+$width,
+$gutter: 2 {
     @media only screen and (min-width: $(width)px) {
         .grid-$(col)-$(width) {
             & > * {
@@ -48,9 +47,11 @@
     }
 }
 
-@mixin gridify 2, 400 {}
-@mixin gridify 4, 600 {}
+@mixin gridify 2,
+400 {}
 
+@mixin gridify 4,
+600 {}
 /**
  * PACE (automatic pre-loader thingy)
  */
@@ -88,3 +89,121 @@ img {
 /**
  * YOUR CODE HERE
  */
+
+#background {
+    background-image: url(../images/background.jpg);
+    width: 100%;
+    height: 690px;
+    background-position: center;
+    image-opacity: 10%;
+}
+
+.header {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    border-bottom: 7px solid #3C8C51;
+    top: 0;
+    box-shadow: 0px 0px 10px
+}
+
+.footer {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 84px;
+    bottom: 0;
+    border-top: 5px solid #3C8C51;
+}
+
+#logo {
+    height: 50px;
+    margin: 25px;
+    margin-left: 7%;
+    float: left;
+    -webkit-filter: invert(40%);
+}
+
+span {
+    position: relative;
+    color: #34495E;
+    float: left;
+    font-size: 55px;
+    margin: 30px;
+    margin-top: 12px;
+    font-family: SignPainter;
+    font-weight: bold;
+    margin-left: -13px;
+    text-shadow: 2px 1.5px #d4d4d4;
+}
+
+.tab {
+    display: inline-block;
+    float: right;
+    color: #616870;
+    font-family: PT Sans;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 42px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-shadow: 1px 1px #d4d4d4;
+}
+
+.tab:hover {
+    color: #FF7D7C;
+}
+
+#menu {
+    margin-right: 7%;
+}
+
+.content {
+    width: 50%;
+    height: 147px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: HaloHandletter;
+    color: white;
+    text-shadow: 3px 2px 4px #4d6052;
+    font-size: 100px;
+}
+
+p {
+    font-family: PT Sans;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+#circle {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 190px;
+    left: 0;
+    right: 0;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px
+}
+
+#wlogo {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    margin-top: 25px;
+    -webkit-filter: invert(100%);
+
+}
